@@ -3,6 +3,7 @@ from __future__ import annotations
 import gzip
 import json
 import math
+import os
 import random
 from collections import defaultdict
 from pathlib import Path
@@ -25,14 +26,39 @@ CONSTRAINED_PER_SUBCATEGORY = 24
 ROOT = Path(__file__).resolve().parent
 RELEASE_ROOT = ROOT.parent if (ROOT.parent / "data").exists() and (ROOT.parent / "outputs").exists() else None
 PROJECT_ROOT = RELEASE_ROOT or ROOT
-WORKSPACE_ROOT = PROJECT_ROOT.parent if RELEASE_ROOT else ROOT.parents[1]
-DATA_ROOT = WORKSPACE_ROOT / "MolJSON-data"
-OUT_ROOT = PROJECT_ROOT / "artifacts_api500"
-QUERY_SPECS_DIR = OUT_ROOT / "query_specs"
-RESPONSES_DIR = OUT_ROOT / "responses"
-MANIFEST_PATH = OUT_ROOT / "queries.jsonl"
-SELECTED_IDS_PATH = OUT_ROOT / "selected_ids.txt"
-SUMMARY_PATH = OUT_ROOT / "subset_summary.json"
+
+
+def find_data_root() -> Path:
+    env_root = (os.environ.get("MOLJSON_DATA_ROOT") or "").strip()
+    env_value = Path(env_root) if env_root else None
+    candidates: list[Path] = []
+    if env_value is not None:
+        candidates.append(env_value)
+    candidates.extend(parent / "MolJSON-data" for parent in [PROJECT_ROOT.parent, *PROJECT_ROOT.parents])
+
+    for candidate in candidates:
+        if (candidate / "questions").exists():
+            return candidate
+    raise FileNotFoundError(
+        "Could not locate a MolJSON-data checkout. Set MOLJSON_DATA_ROOT or place MolJSON-data next to this repo."
+    )
+
+
+DATA_ROOT = find_data_root()
+if RELEASE_ROOT is None:
+    OUT_ROOT = PROJECT_ROOT / "artifacts_api500"
+    QUERY_SPECS_DIR = OUT_ROOT / "query_specs"
+    RESPONSES_DIR = OUT_ROOT / "responses"
+    MANIFEST_PATH = OUT_ROOT / "queries.jsonl"
+    SELECTED_IDS_PATH = OUT_ROOT / "selected_ids.txt"
+    SUMMARY_PATH = OUT_ROOT / "subset_summary.json"
+else:
+    OUT_ROOT = PROJECT_ROOT / "data"
+    QUERY_SPECS_DIR = OUT_ROOT / "query_specs"
+    RESPONSES_DIR = PROJECT_ROOT / "outputs" / "responses"
+    MANIFEST_PATH = OUT_ROOT / "queries.jsonl"
+    SELECTED_IDS_PATH = OUT_ROOT / "selected_ids.txt"
+    SUMMARY_PATH = OUT_ROOT / "subset_summary.json"
 
 
 def load_jsonl_gz(path: Path) -> list[dict[str, Any]]:
@@ -49,6 +75,13 @@ def ensure_dirs() -> None:
     OUT_ROOT.mkdir(parents=True, exist_ok=True)
     QUERY_SPECS_DIR.mkdir(parents=True, exist_ok=True)
     RESPONSES_DIR.mkdir(parents=True, exist_ok=True)
+
+
+def portable_path(path: Path) -> str:
+    try:
+        return path.relative_to(PROJECT_ROOT).as_posix()
+    except ValueError:
+        return str(path)
 
 
 def response_contract_for(representation: str, evaluation_kind: str) -> str:
@@ -528,8 +561,8 @@ def write_query_specs(queries: list[dict[str, Any]]) -> None:
             spec_path = QUERY_SPECS_DIR / f"{query['id']}.json"
             response_path = RESPONSES_DIR / f"{query['id']}.txt"
             spec = dict(query)
-            spec["spec_path"] = str(spec_path)
-            spec["response_path"] = str(response_path)
+            spec["spec_path"] = portable_path(spec_path)
+            spec["response_path"] = portable_path(response_path)
             spec_path.write_text(json.dumps(spec, indent=2), encoding="utf-8")
             manifest.write(json.dumps(spec, ensure_ascii=True) + "\n")
             selected_ids.append(query["id"])

@@ -1,15 +1,20 @@
 from __future__ import annotations
 
+import os
+import tempfile
 from pathlib import Path
 
-import matplotlib
 import numpy as np
 import pandas as pd
-from matplotlib.patches import Patch
 
+
+os.environ.setdefault("MPLCONFIGDIR", str(Path(tempfile.gettempdir()) / "commonchem_vs_moljson_mplconfig"))
+os.environ.setdefault("XDG_CACHE_HOME", tempfile.gettempdir())
+import matplotlib
 
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
+from matplotlib.patches import Patch
 
 
 ROOT = Path(__file__).resolve().parents[1]

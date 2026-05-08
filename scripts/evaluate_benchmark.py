@@ -2,11 +2,12 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
+import tempfile
 from datetime import date
 from pathlib import Path
 from typing import Any
 
-import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 from rdkit import Chem
@@ -41,7 +42,7 @@ else:
     DEFAULT_RESULTS_CSV = PROJECT_ROOT / "outputs" / "results.csv"
     DEFAULT_SUMMARY_CSV = PROJECT_ROOT / "outputs" / "summary_by_family.csv"
     DEFAULT_PAIRED_CSV = PROJECT_ROOT / "outputs" / "paired_stats.csv"
-    DEFAULT_BLOG_POST_PATH = PROJECT_ROOT / "outputs" / "blog_post.md"
+    DEFAULT_BLOG_POST_PATH = PROJECT_ROOT / "outputs" / "evaluation_report.md"
     DEFAULT_PLOT_PATH = PROJECT_ROOT / "outputs" / "accuracy_by_family.png"
     DEFAULT_IDS_PATH = PROJECT_ROOT / "data" / "selected_ids.txt"
 
@@ -242,6 +243,13 @@ def summarize_paired(df: pd.DataFrame) -> pd.DataFrame:
 
 
 def make_plot(summary_df: pd.DataFrame, *, plot_path: Path, title: str) -> None:
+    os.environ.setdefault("MPLCONFIGDIR", str(Path(tempfile.gettempdir()) / "commonchem_vs_moljson_mplconfig"))
+    os.environ.setdefault("XDG_CACHE_HOME", tempfile.gettempdir())
+    import matplotlib
+
+    matplotlib.use("Agg")
+    import matplotlib.pyplot as plt
+
     plot_df = summary_df[summary_df["family"] != "overall"].copy()
     families = [family for family in FAMILY_LABELS if family != "overall" and family in set(plot_df["family"])]
     x = np.arange(len(families))
@@ -253,7 +261,7 @@ def make_plot(summary_df: pd.DataFrame, *, plot_path: Path, title: str) -> None:
         y = sub["accuracy"].to_numpy(dtype=float)
         lower = y - sub["ci_low"].to_numpy(dtype=float)
         upper = sub["ci_high"].to_numpy(dtype=float) - y
-    ax.bar(
+        ax.bar(
             x + offset,
             y,
             width=width,
