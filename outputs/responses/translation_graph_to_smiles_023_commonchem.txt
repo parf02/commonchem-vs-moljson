@@ -1,0 +1,1 @@
+{"smiles":"NC1C=NC2=C(N3CCC(=O)NC(=O)3)C=NN2C=1"}

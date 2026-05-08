@@ -1,0 +1,1 @@
+{"smiles":"CCOC(=O)CC(N(C)Cc1ccccc1)CCCCCCNC(=O)OC(C)(C)C"}

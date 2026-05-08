@@ -1,0 +1,20 @@
+{
+  "id": "translation_graph_to_smiles_004_commonchem",
+  "pair_id": "translation_graph_to_smiles_004",
+  "family": "translation_graph_to_smiles",
+  "representation": "commonchem",
+  "evaluation_kind": "translation_to_smiles",
+  "prompt": "Convert the molecule from commonchem to smiles: {'commonchem': 10, 'molecules': [{'atoms': [{'z': 6, 'impHs': 3}, {'z': 6}, {'z': 6, 'impHs': 1}, {'z': 16}, {'z': 6}, {'z': 35}, {'z': 6}, {'z': 6}, {'z': 7, 'impHs': 2}, {'z': 8}], 'bonds': [{'type': 1, 'atoms': [0, 1]}, {'type': 2, 'atoms': [1, 2]}, {'type': 1, 'atoms': [2, 3]}, {'type': 1, 'atoms': [3, 4]}, {'type': 1, 'atoms': [4, 5]}, {'type': 2, 'atoms': [4, 6]}, {'type': 1, 'atoms': [6, 7]}, {'type': 1, 'atoms': [7, 8]}, {'type': 2, 'atoms': [7, 9]}, {'type': 1, 'atoms': [6, 1]}]}]}",
+  "response_contract": "Return only a valid JSON object of the form {\"smiles\":\"...\"} with no markdown, code fences, comments, or prose.",
+  "expected_smiles": "Cc1csc(Br)c1C(N)=O",
+  "metadata": {
+    "source_dataset": "translation_large",
+    "source_uuid": "58a108d7-f27d-48b9-945d-ae0987f8fade",
+    "source_smiles": "Cc1csc(Br)c1C(N)=O",
+    "input_format": "graph",
+    "heavy_atoms": 10,
+    "ring_count": 1
+  },
+  "spec_path": "data/query_specs/translation_graph_to_smiles_004_commonchem.json",
+  "response_path": "outputs/responses/translation_graph_to_smiles_004_commonchem.txt"
+}

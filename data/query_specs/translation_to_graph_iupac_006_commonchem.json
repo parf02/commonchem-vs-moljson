@@ -1,0 +1,20 @@
+{
+  "id": "translation_to_graph_iupac_006_commonchem",
+  "pair_id": "translation_to_graph_iupac_006",
+  "family": "translation_to_graph",
+  "representation": "commonchem",
+  "evaluation_kind": "translation_to_graph",
+  "prompt": "Convert the molecule from iupac to commonchem: 4-(2-methylpropoxymethyl)-1-propan-2-yltriazole",
+  "response_contract": "Return only a valid JSON object in CommonChem format. No markdown, no code fences, no comments, no surrounding prose. Use top-level keys \"commonchem\" and \"molecules\". Set \"commonchem\" to 10. Return exactly one molecule. Atom objects use \"z\" and \"impHs\" when nonzero, plus \"chg\" when nonzero. Bond objects use \"type\" and \"atoms\".",
+  "expected_smiles": "CC(C)COCc1cn(C(C)C)nn1",
+  "metadata": {
+    "source_dataset": "translation_large",
+    "source_uuid": "1dc6dd34-61f5-409e-baf2-917210aa848a",
+    "source_smiles": "CC(C)COCc1cn(C(C)C)nn1",
+    "input_format": "iupac",
+    "heavy_atoms": 14,
+    "ring_count": 1
+  },
+  "spec_path": "data/query_specs/translation_to_graph_iupac_006_commonchem.json",
+  "response_path": "outputs/responses/translation_to_graph_iupac_006_commonchem.txt"
+}

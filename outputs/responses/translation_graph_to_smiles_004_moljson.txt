@@ -1,0 +1,1 @@
+{"smiles":"Cc1csc(Br)c1C(N)=O"}

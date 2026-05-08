@@ -1,0 +1,20 @@
+{
+  "id": "translation_to_graph_iupac_014_moljson",
+  "pair_id": "translation_to_graph_iupac_014",
+  "family": "translation_to_graph",
+  "representation": "moljson",
+  "evaluation_kind": "translation_to_graph",
+  "prompt": "Convert the molecule from iupac to graph: N-[(2-chlorophenyl)methyl]pentadec-14-yn-1-amine",
+  "response_contract": "Return only a valid JSON object in MolJSON format. No markdown, no code fences, no comments, no surrounding prose. Use the MolJSON keys atoms, bonds, charges, and aromatic_n_h.",
+  "expected_smiles": "C#CCCCCCCCCCCCCCNCc1ccccc1Cl",
+  "metadata": {
+    "source_dataset": "translation_large",
+    "source_uuid": "e01fc2de-0729-41c3-aab2-8394d05e0001",
+    "source_smiles": "C#CCCCCCCCCCCCCCNCc1ccccc1Cl",
+    "input_format": "iupac",
+    "heavy_atoms": 24,
+    "ring_count": 1
+  },
+  "spec_path": "data/query_specs/translation_to_graph_iupac_014_moljson.json",
+  "response_path": "outputs/responses/translation_to_graph_iupac_014_moljson.txt"
+}

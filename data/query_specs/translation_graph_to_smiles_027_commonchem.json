@@ -1,0 +1,20 @@
+{
+  "id": "translation_graph_to_smiles_027_commonchem",
+  "pair_id": "translation_graph_to_smiles_027",
+  "family": "translation_graph_to_smiles",
+  "representation": "commonchem",
+  "evaluation_kind": "translation_to_smiles",
+  "prompt": "Convert the molecule from commonchem to smiles: {'commonchem': 10, 'molecules': [{'atoms': [{'z': 6, 'impHs': 3}, {'z': 7, 'impHs': 1}, {'z': 6}, {'z': 8}, {'z': 6}, {'z': 8}, {'z': 6, 'impHs': 2}, {'z': 6, 'impHs': 2}, {'z': 6, 'impHs': 1}, {'z': 6, 'impHs': 3}, {'z': 7, 'impHs': 1}, {'z': 6}, {'z': 8}, {'z': 6}, {'z': 6, 'impHs': 1}, {'z': 7, 'impHs': 1}, {'z': 6, 'impHs': 1}, {'z': 6}, {'z': 6}, {'z': 6, 'impHs': 3}, {'z': 6, 'impHs': 3}, {'z': 6, 'impHs': 3}], 'bonds': [{'type': 1, 'atoms': [0, 1]}, {'type': 1, 'atoms': [1, 2]}, {'type': 2, 'atoms': [2, 3]}, {'type': 1, 'atoms': [2, 4]}, {'type': 2, 'atoms': [4, 5]}, {'type': 1, 'atoms': [4, 6]}, {'type': 1, 'atoms': [6, 7]}, {'type': 1, 'atoms': [7, 8]}, {'type': 1, 'atoms': [8, 9]}, {'type': 1, 'atoms': [8, 10]}, {'type': 1, 'atoms': [10, 11]}, {'type': 2, 'atoms': [11, 12]}, {'type': 1, 'atoms': [11, 13]}, {'type': 2, 'atoms': [13, 14]}, {'type': 1, 'atoms': [14, 15]}, {'type': 1, 'atoms': [15, 16]}, {'type': 2, 'atoms': [16, 17]}, {'type': 1, 'atoms': [17, 18]}, {'type': 1, 'atoms': [18, 19]}, {'type': 1, 'atoms': [18, 20]}, {'type': 1, 'atoms': [18, 21]}, {'type': 1, 'atoms': [17, 13]}]}]}",
+  "response_contract": "Return only a valid JSON object of the form {\"smiles\":\"...\"} with no markdown, code fences, comments, or prose.",
+  "expected_smiles": "CNC(=O)C(=O)CCC(C)NC(=O)c1c[nH]cc1C(C)(C)C",
+  "metadata": {
+    "source_dataset": "translation_large",
+    "source_uuid": "4b2ed347-766f-4539-865f-c31ed72acf73",
+    "source_smiles": "CNC(=O)C(=O)CCC(C)NC(=O)c1c[nH]cc1C(C)(C)C",
+    "input_format": "graph",
+    "heavy_atoms": 22,
+    "ring_count": 1
+  },
+  "spec_path": "data/query_specs/translation_graph_to_smiles_027_commonchem.json",
+  "response_path": "outputs/responses/translation_graph_to_smiles_027_commonchem.txt"
+}

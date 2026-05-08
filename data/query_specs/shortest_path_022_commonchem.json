@@ -1,0 +1,20 @@
+{
+  "id": "shortest_path_022_commonchem",
+  "pair_id": "shortest_path_022",
+  "family": "shortest_path",
+  "representation": "commonchem",
+  "evaluation_kind": "shortest_path",
+  "prompt": "Determine the number of bonds along the shortest path connecting the two halogen atoms. Count each bond equally, including those directly attached to the halogen atoms.\n\n{'commonchem': 10, 'molecules': [{'atoms': [{'z': 8}, {'z': 6}, {'z': 6}, {'z': 6, 'impHs': 1}, {'z': 6, 'impHs': 1}, {'z': 6, 'impHs': 1}, {'z': 6, 'impHs': 1}, {'z': 6}, {'z': 6, 'impHs': 1}, {'z': 6, 'impHs': 2}, {'z': 6}, {'z': 7}, {'z': 6, 'impHs': 1}, {'z': 6, 'impHs': 1}, {'z': 6, 'impHs': 1}, {'z': 6}, {'z': 35}, {'z': 7}, {'z': 6, 'impHs': 2}, {'z': 6}, {'z': 6, 'impHs': 1}, {'z': 6, 'impHs': 1}, {'z': 6}, {'z': 7}, {'z': 6}, {'z': 17}, {'z': 7, 'impHs': 1}, {'z': 6}, {'z': 6, 'impHs': 1}], 'bonds': [{'type': 2, 'atoms': [0, 1]}, {'type': 1, 'atoms': [1, 2]}, {'type': 2, 'atoms': [2, 3]}, {'type': 1, 'atoms': [3, 4]}, {'type': 2, 'atoms': [4, 5]}, {'type': 1, 'atoms': [5, 6]}, {'type': 2, 'atoms': [6, 7]}, {'type': 1, 'atoms': [7, 8]}, {'type': 1, 'atoms': [8, 9]}, {'type': 1, 'atoms': [9, 10]}, {'type': 2, 'atoms': [10, 11]}, {'type': 1, 'atoms': [11, 12]}, {'type': 2, 'atoms': [12, 13]}, {'type': 1, 'atoms': [13, 14]}, {'type': 2, 'atoms': [14, 15]}, {'type': 1, 'atoms': [15, 16]}, {'type': 1, 'atoms': [8, 17]}, {'type': 1, 'atoms': [17, 18]}, {'type': 1, 'atoms': [18, 19]}, {'type': 1, 'atoms': [19, 20]}, {'type': 2, 'atoms': [20, 21]}, {'type': 1, 'atoms': [21, 22]}, {'type': 1, 'atoms': [22, 23]}, {'type': 2, 'atoms': [23, 24]}, {'type': 1, 'atoms': [24, 25]}, {'type': 1, 'atoms': [24, 26]}, {'type': 1, 'atoms': [26, 27]}, {'type': 1, 'atoms': [27, 28]}, {'type': 1, 'atoms': [17, 1]}, {'type': 2, 'atoms': [28, 19]}, {'type': 1, 'atoms': [7, 2]}, {'type': 1, 'atoms': [15, 10]}, {'type': 2, 'atoms': [27, 22]}]}]}\n\nGive your answer as an integer. Do not write any comments.",
+  "response_contract": "Return only a valid JSON object of the form {\"integer\":\"N\"} where N is the shortest-path length, with no markdown, code fences, comments, or prose.",
+  "expected_integer": 12,
+  "metadata": {
+    "source_dataset": "shortest_path_questions",
+    "source_uuid": "0091f368-4c2f-4313-8114-8e191d4ccfbf",
+    "source_smiles": "O=C1c2ccccc2C(Cc2ncccc2Br)N1Cc1ccc2nc(Cl)[nH]c2c1",
+    "path_length": 12,
+    "heavy_atoms": 29,
+    "ring_count": 5
+  },
+  "spec_path": "data/query_specs/shortest_path_022_commonchem.json",
+  "response_path": "outputs/responses/shortest_path_022_commonchem.txt"
+}

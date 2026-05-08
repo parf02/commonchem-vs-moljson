@@ -1,0 +1,1 @@
+{"atoms":[{"id":"a1","element":"C"},{"id":"a2","element":"F"},{"id":"a3","element":"Cl"},{"id":"a4","element":"Br"},{"id":"a5","element":"H"}],"bonds":[{"source":"a1","target":"a2","order":1},{"source":"a1","target":"a3","order":1},{"source":"a1","target":"a4","order":1},{"source":"a1","target":"a5","order":1}],"charges":null,"aromatic_n_h":null}

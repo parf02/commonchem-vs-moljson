@@ -1,0 +1,20 @@
+{
+  "id": "translation_to_graph_iupac_006_moljson",
+  "pair_id": "translation_to_graph_iupac_006",
+  "family": "translation_to_graph",
+  "representation": "moljson",
+  "evaluation_kind": "translation_to_graph",
+  "prompt": "Convert the molecule from iupac to graph: 4-(2-methylpropoxymethyl)-1-propan-2-yltriazole",
+  "response_contract": "Return only a valid JSON object in MolJSON format. No markdown, no code fences, no comments, no surrounding prose. Use the MolJSON keys atoms, bonds, charges, and aromatic_n_h.",
+  "expected_smiles": "CC(C)COCc1cn(C(C)C)nn1",
+  "metadata": {
+    "source_dataset": "translation_large",
+    "source_uuid": "1dc6dd34-61f5-409e-baf2-917210aa848a",
+    "source_smiles": "CC(C)COCc1cn(C(C)C)nn1",
+    "input_format": "iupac",
+    "heavy_atoms": 14,
+    "ring_count": 1
+  },
+  "spec_path": "data/query_specs/translation_to_graph_iupac_006_moljson.json",
+  "response_path": "outputs/responses/translation_to_graph_iupac_006_moljson.txt"
+}

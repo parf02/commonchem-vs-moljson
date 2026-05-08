@@ -1,0 +1,20 @@
+{
+  "id": "translation_to_graph_iupac_003_moljson",
+  "pair_id": "translation_to_graph_iupac_003",
+  "family": "translation_to_graph",
+  "representation": "moljson",
+  "evaluation_kind": "translation_to_graph",
+  "prompt": "Convert the molecule from iupac to graph: 4,5-dimethyl-2-(oxolan-2-yl)-1,3-thiazole",
+  "response_contract": "Return only a valid JSON object in MolJSON format. No markdown, no code fences, no comments, no surrounding prose. Use the MolJSON keys atoms, bonds, charges, and aromatic_n_h.",
+  "expected_smiles": "Cc1nc(C2CCCO2)sc1C",
+  "metadata": {
+    "source_dataset": "translation_large",
+    "source_uuid": "c6548932-a8c9-40d5-a27c-07f77c88595e",
+    "source_smiles": "Cc1nc(C2CCCO2)sc1C",
+    "input_format": "iupac",
+    "heavy_atoms": 12,
+    "ring_count": 2
+  },
+  "spec_path": "data/query_specs/translation_to_graph_iupac_003_moljson.json",
+  "response_path": "outputs/responses/translation_to_graph_iupac_003_moljson.txt"
+}

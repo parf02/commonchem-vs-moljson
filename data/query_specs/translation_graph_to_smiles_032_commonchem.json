@@ -1,0 +1,20 @@
+{
+  "id": "translation_graph_to_smiles_032_commonchem",
+  "pair_id": "translation_graph_to_smiles_032",
+  "family": "translation_graph_to_smiles",
+  "representation": "commonchem",
+  "evaluation_kind": "translation_to_smiles",
+  "prompt": "Convert the molecule from commonchem to smiles: {'commonchem': 10, 'molecules': [{'atoms': [{'z': 6, 'impHs': 3}, {'z': 8}, {'z': 6, 'impHs': 1}, {'z': 6, 'impHs': 2}, {'z': 6, 'impHs': 2}, {'z': 7}, {'z': 6}, {'z': 6, 'impHs': 1}, {'z': 6}, {'z': 6, 'impHs': 2}, {'z': 8}, {'z': 6, 'impHs': 1}, {'z': 6, 'impHs': 2}, {'z': 6, 'impHs': 2}, {'z': 6, 'impHs': 2}, {'z': 6, 'impHs': 1}, {'z': 6}, {'z': 7, 'chg': 1}, {'z': 8}, {'z': 8, 'chg': -1}, {'z': 6, 'impHs': 1}, {'z': 6, 'impHs': 2}, {'z': 6, 'impHs': 2}], 'bonds': [{'type': 1, 'atoms': [0, 1]}, {'type': 1, 'atoms': [1, 2]}, {'type': 1, 'atoms': [2, 3]}, {'type': 1, 'atoms': [3, 4]}, {'type': 1, 'atoms': [4, 5]}, {'type': 1, 'atoms': [5, 6]}, {'type': 1, 'atoms': [6, 7]}, {'type': 2, 'atoms': [7, 8]}, {'type': 1, 'atoms': [8, 9]}, {'type': 1, 'atoms': [9, 10]}, {'type': 1, 'atoms': [10, 11]}, {'type': 1, 'atoms': [11, 12]}, {'type': 1, 'atoms': [12, 13]}, {'type': 1, 'atoms': [13, 14]}, {'type': 1, 'atoms': [8, 15]}, {'type': 2, 'atoms': [15, 16]}, {'type': 1, 'atoms': [16, 17]}, {'type': 2, 'atoms': [17, 18]}, {'type': 1, 'atoms': [17, 19]}, {'type': 1, 'atoms': [16, 20]}, {'type': 1, 'atoms': [5, 21]}, {'type': 1, 'atoms': [21, 22]}, {'type': 1, 'atoms': [22, 2]}, {'type': 2, 'atoms': [20, 6]}, {'type': 1, 'atoms': [14, 11]}]}]}",
+  "response_contract": "Return only a valid JSON object of the form {\"smiles\":\"...\"} with no markdown, code fences, comments, or prose.",
+  "expected_smiles": "COC1CCN(c2cc(COC3CCC3)cc([N+](=O)[O-])c2)CC1",
+  "metadata": {
+    "source_dataset": "translation_large",
+    "source_uuid": "89337d7c-f86a-412d-b0d9-7690064e6c41",
+    "source_smiles": "COC1CCN(c2cc(COC3CCC3)cc([N+](=O)[O-])c2)CC1",
+    "input_format": "graph",
+    "heavy_atoms": 23,
+    "ring_count": 3
+  },
+  "spec_path": "data/query_specs/translation_graph_to_smiles_032_commonchem.json",
+  "response_path": "outputs/responses/translation_graph_to_smiles_032_commonchem.txt"
+}

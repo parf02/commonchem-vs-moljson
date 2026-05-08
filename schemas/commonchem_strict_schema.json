@@ -1,0 +1,111 @@
+{
+  "title": "CommonChem",
+  "description": "JSON schema for CommonChem. Strict benchmark subset derived from the repo schema plus the CommonChem specification.",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "commonchem": {
+      "description": "The version of the CommonChem specification that this file adheres to",
+      "type": "integer",
+      "enum": [
+        10
+      ]
+    },
+    "molecules": {
+      "description": "Molecules in this CommonChem file",
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "description": "JSON schema for CommonChem Molecule",
+        "properties": {
+          "atoms": {
+            "description": "Atoms in this molecule",
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "description": "Benchmark atom subset derived from the CommonChem Atom object in the spec.",
+              "properties": {
+                "z": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 118
+                },
+                "impHs": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 8
+                },
+                "chg": {
+                  "type": "integer",
+                  "minimum": -5,
+                  "maximum": 5
+                },
+                "isotope": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 400
+                },
+                "nRad": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 4
+                }
+              },
+              "required": [
+                "z",
+                "impHs",
+                "chg",
+                "isotope",
+                "nRad"
+              ]
+            }
+          },
+          "bonds": {
+            "description": "Bonds in this molecule",
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "description": "Benchmark bond subset derived from the CommonChem Bond object in the spec.",
+              "properties": {
+                "type": {
+                  "type": "integer",
+                  "enum": [
+                    1,
+                    2,
+                    3
+                  ]
+                },
+                "atoms": {
+                  "type": "array",
+                  "items": {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  "minItems": 2,
+                  "maxItems": 2
+                }
+              },
+              "required": [
+                "type",
+                "atoms"
+              ]
+            }
+          }
+        },
+        "required": [
+          "atoms",
+          "bonds"
+        ]
+      }
+    }
+  },
+  "required": [
+    "commonchem",
+    "molecules"
+  ]
+}

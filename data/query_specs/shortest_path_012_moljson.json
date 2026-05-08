@@ -1,0 +1,20 @@
+{
+  "id": "shortest_path_012_moljson",
+  "pair_id": "shortest_path_012",
+  "family": "shortest_path",
+  "representation": "moljson",
+  "evaluation_kind": "shortest_path",
+  "prompt": "Determine the number of bonds along the shortest path connecting the two halogen atoms. Count each bond equally, including those directly attached to the halogen atoms.\n\n{'atoms': [{'id': 'C1', 'element': 'C'}, {'id': 'C2', 'element': 'C'}, {'id': 'N1', 'element': 'N'}, {'id': 'C3', 'element': 'C'}, {'id': 'S1', 'element': 'S'}, {'id': 'Br1', 'element': 'Br'}, {'id': 'C4', 'element': 'C'}, {'id': 'N2', 'element': 'N'}, {'id': 'C5', 'element': 'C'}, {'id': 'C6', 'element': 'C'}, {'id': 'S2', 'element': 'S'}, {'id': 'Br2', 'element': 'Br'}], 'bonds': [{'source': 'C1', 'target': 'C2', 'order': 1.5}, {'source': 'C2', 'target': 'N1', 'order': 1.5}, {'source': 'N1', 'target': 'C3', 'order': 1.5}, {'source': 'C3', 'target': 'S1', 'order': 1.5}, {'source': 'C3', 'target': 'Br1', 'order': 1.0}, {'source': 'C2', 'target': 'C4', 'order': 1.0}, {'source': 'C4', 'target': 'N2', 'order': 1.5}, {'source': 'N2', 'target': 'C5', 'order': 1.5}, {'source': 'C5', 'target': 'C6', 'order': 1.5}, {'source': 'C6', 'target': 'S2', 'order': 1.5}, {'source': 'C5', 'target': 'Br2', 'order': 1.0}, {'source': 'S1', 'target': 'C1', 'order': 1.5}, {'source': 'S2', 'target': 'C4', 'order': 1.5}]}\n\nGive your answer as an integer. Do not write any comments.",
+  "response_contract": "Return only a valid JSON object of the form {\"integer\":\"N\"} where N is the shortest-path length, with no markdown, code fences, comments, or prose.",
+  "expected_integer": 7,
+  "metadata": {
+    "source_dataset": "shortest_path_questions",
+    "source_uuid": "005c0d06-a57b-4b5c-9d66-9c508b9d3270",
+    "source_smiles": "Brc1csc(-c2csc(Br)n2)n1",
+    "path_length": 7,
+    "heavy_atoms": 12,
+    "ring_count": 2
+  },
+  "spec_path": "data/query_specs/shortest_path_012_moljson.json",
+  "response_path": "outputs/responses/shortest_path_012_moljson.txt"
+}

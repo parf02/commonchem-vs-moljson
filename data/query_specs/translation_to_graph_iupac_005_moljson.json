@@ -1,0 +1,20 @@
+{
+  "id": "translation_to_graph_iupac_005_moljson",
+  "pair_id": "translation_to_graph_iupac_005",
+  "family": "translation_to_graph",
+  "representation": "moljson",
+  "evaluation_kind": "translation_to_graph",
+  "prompt": "Convert the molecule from iupac to graph: 2-carboxyethyl-(3-ethoxy-3-oxopropyl)sulfanyl-sulfanylsulfanium",
+  "response_contract": "Return only a valid JSON object in MolJSON format. No markdown, no code fences, no comments, no surrounding prose. Use the MolJSON keys atoms, bonds, charges, and aromatic_n_h.",
+  "expected_smiles": "CCOC(=O)CCS[S+](S)CCC(=O)O",
+  "metadata": {
+    "source_dataset": "translation_large",
+    "source_uuid": "db304390-be48-4bb4-a6ec-a4fc3b754f6a",
+    "source_smiles": "CCOC(=O)CCS[S+](S)CCC(=O)O",
+    "input_format": "iupac",
+    "heavy_atoms": 15,
+    "ring_count": 0
+  },
+  "spec_path": "data/query_specs/translation_to_graph_iupac_005_moljson.json",
+  "response_path": "outputs/responses/translation_to_graph_iupac_005_moljson.txt"
+}

@@ -1,0 +1,20 @@
+{
+  "id": "translation_to_graph_iupac_010_commonchem",
+  "pair_id": "translation_to_graph_iupac_010",
+  "family": "translation_to_graph",
+  "representation": "commonchem",
+  "evaluation_kind": "translation_to_graph",
+  "prompt": "Convert the molecule from iupac to commonchem: 1-N-hexyl-1-N'-(methylaminomethyl)cyclobutane-1,1-dicarboxamide",
+  "response_contract": "Return only a valid JSON object in CommonChem format. No markdown, no code fences, no comments, no surrounding prose. Use top-level keys \"commonchem\" and \"molecules\". Set \"commonchem\" to 10. Return exactly one molecule. Atom objects use \"z\" and \"impHs\" when nonzero, plus \"chg\" when nonzero. Bond objects use \"type\" and \"atoms\".",
+  "expected_smiles": "CCCCCCNC(=O)C1(C(=O)NCNC)CCC1",
+  "metadata": {
+    "source_dataset": "translation_large",
+    "source_uuid": "e081ecea-f11e-4e75-9256-fd46c492236c",
+    "source_smiles": "CCCCCCNC(=O)C1(C(=O)NCNC)CCC1",
+    "input_format": "iupac",
+    "heavy_atoms": 19,
+    "ring_count": 1
+  },
+  "spec_path": "data/query_specs/translation_to_graph_iupac_010_commonchem.json",
+  "response_path": "outputs/responses/translation_to_graph_iupac_010_commonchem.txt"
+}

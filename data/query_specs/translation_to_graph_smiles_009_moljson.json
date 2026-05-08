@@ -1,0 +1,20 @@
+{
+  "id": "translation_to_graph_smiles_009_moljson",
+  "pair_id": "translation_to_graph_smiles_009",
+  "family": "translation_to_graph",
+  "representation": "moljson",
+  "evaluation_kind": "translation_to_graph",
+  "prompt": "Convert the molecule from smiles to graph: NOOOOOCCCCCCCCCCC(N)=O",
+  "response_contract": "Return only a valid JSON object in MolJSON format. No markdown, no code fences, no comments, no surrounding prose. Use the MolJSON keys atoms, bonds, charges, and aromatic_n_h.",
+  "expected_smiles": "NOOOOOCCCCCCCCCCC(N)=O",
+  "metadata": {
+    "source_dataset": "translation_large",
+    "source_uuid": "7e5ac38a-1991-4652-9472-3543f762cd56",
+    "source_smiles": "NOOOOOCCCCCCCCCCC(N)=O",
+    "input_format": "smiles",
+    "heavy_atoms": 19,
+    "ring_count": 0
+  },
+  "spec_path": "data/query_specs/translation_to_graph_smiles_009_moljson.json",
+  "response_path": "outputs/responses/translation_to_graph_smiles_009_moljson.txt"
+}

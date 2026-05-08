@@ -1,0 +1,20 @@
+{
+  "id": "translation_graph_to_smiles_021_moljson",
+  "pair_id": "translation_graph_to_smiles_021",
+  "family": "translation_graph_to_smiles",
+  "representation": "moljson",
+  "evaluation_kind": "translation_to_smiles",
+  "prompt": "Convert the molecule from graph to smiles: {'atoms': [{'id': 'C1', 'element': 'C'}, {'id': 'N1', 'element': 'N'}, {'id': 'C2', 'element': 'C'}, {'id': 'C3', 'element': 'C'}, {'id': 'C4', 'element': 'C'}, {'id': 'C5', 'element': 'C'}, {'id': 'C6', 'element': 'C'}, {'id': 'C7', 'element': 'C'}, {'id': 'N2', 'element': 'N'}, {'id': 'S1', 'element': 'S'}, {'id': 'O1', 'element': 'O'}, {'id': 'O2', 'element': 'O'}, {'id': 'C8', 'element': 'C'}, {'id': 'C9', 'element': 'C'}, {'id': 'N3', 'element': 'N'}, {'id': 'O3', 'element': 'O'}, {'id': 'C10', 'element': 'C'}, {'id': 'C11', 'element': 'C'}, {'id': 'N4', 'element': 'N'}], 'bonds': [{'source': 'C1', 'target': 'N1', 'order': 1.0}, {'source': 'N1', 'target': 'C2', 'order': 1.5}, {'source': 'C2', 'target': 'C3', 'order': 1.5}, {'source': 'C3', 'target': 'C4', 'order': 1.5}, {'source': 'C4', 'target': 'C5', 'order': 1.5}, {'source': 'C5', 'target': 'C6', 'order': 1.5}, {'source': 'C6', 'target': 'C7', 'order': 1.5}, {'source': 'C7', 'target': 'N2', 'order': 1.0}, {'source': 'N2', 'target': 'S1', 'order': 1.0}, {'source': 'S1', 'target': 'O1', 'order': 2.0}, {'source': 'S1', 'target': 'O2', 'order': 2.0}, {'source': 'S1', 'target': 'C8', 'order': 1.0}, {'source': 'C8', 'target': 'C9', 'order': 1.0}, {'source': 'C9', 'target': 'N3', 'order': 1.0}, {'source': 'C6', 'target': 'O3', 'order': 1.0}, {'source': 'O3', 'target': 'C10', 'order': 1.0}, {'source': 'C3', 'target': 'C11', 'order': 1.5}, {'source': 'C11', 'target': 'N4', 'order': 1.5}, {'source': 'N4', 'target': 'N1', 'order': 1.5}, {'source': 'C7', 'target': 'C2', 'order': 1.5}]}",
+  "response_contract": "Return only a valid JSON object of the form {\"smiles\":\"...\"} with no markdown, code fences, comments, or prose.",
+  "expected_smiles": "COc1ccc2cnn(C)c2c1NS(=O)(=O)CCN",
+  "metadata": {
+    "source_dataset": "translation_large",
+    "source_uuid": "2dbe73a1-d115-4a23-9750-c4892a3f8d91",
+    "source_smiles": "COc1ccc2cnn(C)c2c1NS(=O)(=O)CCN",
+    "input_format": "graph",
+    "heavy_atoms": 19,
+    "ring_count": 2
+  },
+  "spec_path": "data/query_specs/translation_graph_to_smiles_021_moljson.json",
+  "response_path": "outputs/responses/translation_graph_to_smiles_021_moljson.txt"
+}

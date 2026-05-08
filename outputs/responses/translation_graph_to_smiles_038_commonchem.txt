@@ -1,0 +1,1 @@
+{"smiles":"[I]1(OC(=O)C(C)(C)C)OC(c2c(C)c(C)c(C)c(C)c21)(C(F)(F)F)C(F)(F)F"}

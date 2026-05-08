@@ -1,0 +1,20 @@
+{
+  "id": "shortest_path_013_moljson",
+  "pair_id": "shortest_path_013",
+  "family": "shortest_path",
+  "representation": "moljson",
+  "evaluation_kind": "shortest_path",
+  "prompt": "Determine the number of bonds along the shortest path connecting the two halogen atoms. Count each bond equally, including those directly attached to the halogen atoms.\n\n{'atoms': [{'id': 'C1', 'element': 'C'}, {'id': 'C2', 'element': 'C'}, {'id': 'C3', 'element': 'C'}, {'id': 'C4', 'element': 'C'}, {'id': 'Br1', 'element': 'Br'}, {'id': 'O1', 'element': 'O'}, {'id': 'C5', 'element': 'C'}, {'id': 'C6', 'element': 'C'}, {'id': 'C7', 'element': 'C'}, {'id': 'Br2', 'element': 'Br'}], 'bonds': [{'source': 'C1', 'target': 'C2', 'order': 1.0}, {'source': 'C2', 'target': 'C3', 'order': 1.0}, {'source': 'C3', 'target': 'C4', 'order': 3.0}, {'source': 'C4', 'target': 'Br1', 'order': 1.0}, {'source': 'C2', 'target': 'O1', 'order': 1.0}, {'source': 'O1', 'target': 'C5', 'order': 1.0}, {'source': 'C5', 'target': 'C6', 'order': 1.0}, {'source': 'C6', 'target': 'C7', 'order': 3.0}, {'source': 'C7', 'target': 'Br2', 'order': 1.0}]}\n\nGive your answer as an integer. Do not write any comments.",
+  "response_contract": "Return only a valid JSON object of the form {\"integer\":\"N\"} where N is the shortest-path length, with no markdown, code fences, comments, or prose.",
+  "expected_integer": 8,
+  "metadata": {
+    "source_dataset": "shortest_path_questions",
+    "source_uuid": "03f4f015-ebda-48cd-a926-dbe60b7b3f20",
+    "source_smiles": "CC(C#CBr)OCC#CBr",
+    "path_length": 8,
+    "heavy_atoms": 10,
+    "ring_count": 0
+  },
+  "spec_path": "data/query_specs/shortest_path_013_moljson.json",
+  "response_path": "outputs/responses/shortest_path_013_moljson.txt"
+}

@@ -1,0 +1,20 @@
+{
+  "id": "translation_to_graph_iupac_013_commonchem",
+  "pair_id": "translation_to_graph_iupac_013",
+  "family": "translation_to_graph",
+  "representation": "commonchem",
+  "evaluation_kind": "translation_to_graph",
+  "prompt": "Convert the molecule from iupac to commonchem: 3,3,4,4,5,5,6,6,7,7,8,8,8-tridecafluorooctane-1-sulfonimidic acid",
+  "response_contract": "Return only a valid JSON object in CommonChem format. No markdown, no code fences, no comments, no surrounding prose. Use top-level keys \"commonchem\" and \"molecules\". Set \"commonchem\" to 10. Return exactly one molecule. Atom objects use \"z\" and \"impHs\" when nonzero, plus \"chg\" when nonzero. Bond objects use \"type\" and \"atoms\".",
+  "expected_smiles": "N=S(=O)(O)CCC(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F",
+  "metadata": {
+    "source_dataset": "translation_large",
+    "source_uuid": "53666006-436a-4fa8-9365-6a0564b46f2a",
+    "source_smiles": "N=S(=O)(O)CCC(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F",
+    "input_format": "iupac",
+    "heavy_atoms": 25,
+    "ring_count": 0
+  },
+  "spec_path": "data/query_specs/translation_to_graph_iupac_013_commonchem.json",
+  "response_path": "outputs/responses/translation_to_graph_iupac_013_commonchem.txt"
+}

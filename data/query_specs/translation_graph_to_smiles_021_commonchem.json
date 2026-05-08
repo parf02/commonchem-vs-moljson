@@ -1,0 +1,20 @@
+{
+  "id": "translation_graph_to_smiles_021_commonchem",
+  "pair_id": "translation_graph_to_smiles_021",
+  "family": "translation_graph_to_smiles",
+  "representation": "commonchem",
+  "evaluation_kind": "translation_to_smiles",
+  "prompt": "Convert the molecule from commonchem to smiles: {'commonchem': 10, 'molecules': [{'atoms': [{'z': 6, 'impHs': 3}, {'z': 8}, {'z': 6}, {'z': 6, 'impHs': 1}, {'z': 6, 'impHs': 1}, {'z': 6}, {'z': 6, 'impHs': 1}, {'z': 7}, {'z': 7}, {'z': 6, 'impHs': 3}, {'z': 6}, {'z': 6}, {'z': 7, 'impHs': 1}, {'z': 16}, {'z': 8}, {'z': 8}, {'z': 6, 'impHs': 2}, {'z': 6, 'impHs': 2}, {'z': 7, 'impHs': 2}], 'bonds': [{'type': 1, 'atoms': [0, 1]}, {'type': 1, 'atoms': [1, 2]}, {'type': 1, 'atoms': [2, 3]}, {'type': 2, 'atoms': [3, 4]}, {'type': 1, 'atoms': [4, 5]}, {'type': 1, 'atoms': [5, 6]}, {'type': 2, 'atoms': [6, 7]}, {'type': 1, 'atoms': [7, 8]}, {'type': 1, 'atoms': [8, 9]}, {'type': 1, 'atoms': [8, 10]}, {'type': 1, 'atoms': [10, 11]}, {'type': 1, 'atoms': [11, 12]}, {'type': 1, 'atoms': [12, 13]}, {'type': 2, 'atoms': [13, 14]}, {'type': 2, 'atoms': [13, 15]}, {'type': 1, 'atoms': [13, 16]}, {'type': 1, 'atoms': [16, 17]}, {'type': 1, 'atoms': [17, 18]}, {'type': 2, 'atoms': [11, 2]}, {'type': 2, 'atoms': [10, 5]}]}]}",
+  "response_contract": "Return only a valid JSON object of the form {\"smiles\":\"...\"} with no markdown, code fences, comments, or prose.",
+  "expected_smiles": "COc1ccc2cnn(C)c2c1NS(=O)(=O)CCN",
+  "metadata": {
+    "source_dataset": "translation_large",
+    "source_uuid": "2dbe73a1-d115-4a23-9750-c4892a3f8d91",
+    "source_smiles": "COc1ccc2cnn(C)c2c1NS(=O)(=O)CCN",
+    "input_format": "graph",
+    "heavy_atoms": 19,
+    "ring_count": 2
+  },
+  "spec_path": "data/query_specs/translation_graph_to_smiles_021_commonchem.json",
+  "response_path": "outputs/responses/translation_graph_to_smiles_021_commonchem.txt"
+}

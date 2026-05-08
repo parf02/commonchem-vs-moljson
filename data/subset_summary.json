@@ -1,0 +1,11 @@
+{
+  "seed": 20260506,
+  "query_count": 500,
+  "pair_count": 250,
+  "translation_to_graph_smiles_pairs": 20,
+  "translation_to_graph_iupac_pairs": 20,
+  "translation_graph_to_smiles_pairs": 40,
+  "shortest_path_pairs": 50,
+  "constrained_pairs": 120,
+  "constrained_per_subcategory": 24
+}

@@ -1,0 +1,20 @@
+{
+  "id": "shortest_path_019_commonchem",
+  "pair_id": "shortest_path_019",
+  "family": "shortest_path",
+  "representation": "commonchem",
+  "evaluation_kind": "shortest_path",
+  "prompt": "Determine the number of bonds along the shortest path connecting the two halogen atoms. Count each bond equally, including those directly attached to the halogen atoms.\n\n{'commonchem': 10, 'molecules': [{'atoms': [{'z': 7, 'impHs': 2}, {'z': 6}, {'z': 6, 'impHs': 1}, {'z': 6, 'impHs': 1}, {'z': 6, 'impHs': 1}, {'z': 6}, {'z': 6, 'impHs': 2}, {'z': 6, 'impHs': 2}, {'z': 6, 'impHs': 2}, {'z': 8}, {'z': 17}, {'z': 6}, {'z': 6, 'impHs': 2}, {'z': 6, 'impHs': 2}, {'z': 6, 'impHs': 2}, {'z': 8}, {'z': 17}], 'bonds': [{'type': 1, 'atoms': [0, 1]}, {'type': 1, 'atoms': [1, 2]}, {'type': 2, 'atoms': [2, 3]}, {'type': 1, 'atoms': [3, 4]}, {'type': 2, 'atoms': [4, 5]}, {'type': 1, 'atoms': [5, 6]}, {'type': 1, 'atoms': [6, 7]}, {'type': 1, 'atoms': [7, 8]}, {'type': 1, 'atoms': [8, 9]}, {'type': 1, 'atoms': [9, 10]}, {'type': 1, 'atoms': [5, 11]}, {'type': 1, 'atoms': [11, 12]}, {'type': 1, 'atoms': [12, 13]}, {'type': 1, 'atoms': [13, 14]}, {'type': 1, 'atoms': [14, 15]}, {'type': 1, 'atoms': [15, 16]}, {'type': 2, 'atoms': [11, 1]}]}]}\n\nGive your answer as an integer. Do not write any comments.",
+  "response_contract": "Return only a valid JSON object of the form {\"integer\":\"N\"} where N is the shortest-path length, with no markdown, code fences, comments, or prose.",
+  "expected_integer": 11,
+  "metadata": {
+    "source_dataset": "shortest_path_questions",
+    "source_uuid": "0dfa2c4c-4044-4a25-ab25-5705f137807a",
+    "source_smiles": "Nc1cccc(CCCOCl)c1CCCOCl",
+    "path_length": 11,
+    "heavy_atoms": 17,
+    "ring_count": 1
+  },
+  "spec_path": "data/query_specs/shortest_path_019_commonchem.json",
+  "response_path": "outputs/responses/shortest_path_019_commonchem.txt"
+}

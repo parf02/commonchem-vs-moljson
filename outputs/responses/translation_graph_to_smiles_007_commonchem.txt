@@ -1,0 +1,1 @@
+{"smiles":"C12(C(F)F)CC(CBr)(CO1)C2"}

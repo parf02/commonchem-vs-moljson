@@ -1,0 +1,13 @@
+{
+  "run_date": "2026-05-05",
+  "model": "gpt-5.4",
+  "query_count": 500,
+  "completed_ok": 500,
+  "input_tokens": 303305,
+  "output_tokens": 540221,
+  "total_tokens": 843526,
+  "overall_commonchem_accuracy": 0.82,
+  "overall_moljson_accuracy": 0.832,
+  "overall_diff_commonchem_minus_moljson": -0.01200000000000001,
+  "overall_mcnemar_p_value": 0.7607916425613439
+}

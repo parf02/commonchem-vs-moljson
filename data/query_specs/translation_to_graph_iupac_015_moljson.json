@@ -1,0 +1,20 @@
+{
+  "id": "translation_to_graph_iupac_015_moljson",
+  "pair_id": "translation_to_graph_iupac_015",
+  "family": "translation_to_graph",
+  "representation": "moljson",
+  "evaluation_kind": "translation_to_graph",
+  "prompt": "Convert the molecule from iupac to graph: 4-O-benzyl 2-O-methyl 3-ethyl-5-methyl-1H-pyrrole-2,4-dicarboxylate",
+  "response_contract": "Return only a valid JSON object in MolJSON format. No markdown, no code fences, no comments, no surrounding prose. Use the MolJSON keys atoms, bonds, charges, and aromatic_n_h.",
+  "expected_smiles": "CCc1c(C(=O)OC)[nH]c(C)c1C(=O)OCc1ccccc1",
+  "metadata": {
+    "source_dataset": "translation_large",
+    "source_uuid": "89aa3460-3c2c-4136-a5e6-72b25fcc3d5b",
+    "source_smiles": "CCc1c(C(=O)OC)[nH]c(C)c1C(=O)OCc1ccccc1",
+    "input_format": "iupac",
+    "heavy_atoms": 22,
+    "ring_count": 2
+  },
+  "spec_path": "data/query_specs/translation_to_graph_iupac_015_moljson.json",
+  "response_path": "outputs/responses/translation_to_graph_iupac_015_moljson.txt"
+}

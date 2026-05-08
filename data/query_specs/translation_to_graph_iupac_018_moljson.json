@@ -1,0 +1,20 @@
+{
+  "id": "translation_to_graph_iupac_018_moljson",
+  "pair_id": "translation_to_graph_iupac_018",
+  "family": "translation_to_graph",
+  "representation": "moljson",
+  "evaluation_kind": "translation_to_graph",
+  "prompt": "Convert the molecule from iupac to graph: N-[2-(2-hydroxyethoxy)ethyl]-8-(3-octyloxiran-2-yl)octanamide",
+  "response_contract": "Return only a valid JSON object in MolJSON format. No markdown, no code fences, no comments, no surrounding prose. Use the MolJSON keys atoms, bonds, charges, and aromatic_n_h.",
+  "expected_smiles": "CCCCCCCCC1OC1CCCCCCCC(=O)NCCOCCO",
+  "metadata": {
+    "source_dataset": "translation_large",
+    "source_uuid": "a115c296-212f-4958-ab85-9177486d623f",
+    "source_smiles": "CCCCCCCCC1OC1CCCCCCCC(=O)NCCOCCO",
+    "input_format": "iupac",
+    "heavy_atoms": 27,
+    "ring_count": 1
+  },
+  "spec_path": "data/query_specs/translation_to_graph_iupac_018_moljson.json",
+  "response_path": "outputs/responses/translation_to_graph_iupac_018_moljson.txt"
+}

@@ -1,0 +1,20 @@
+{
+  "id": "translation_graph_to_smiles_037_moljson",
+  "pair_id": "translation_graph_to_smiles_037",
+  "family": "translation_graph_to_smiles",
+  "representation": "moljson",
+  "evaluation_kind": "translation_to_smiles",
+  "prompt": "Convert the molecule from graph to smiles: {'atoms': [{'id': 'C1', 'element': 'C'}, {'id': 'C2', 'element': 'C'}, {'id': 'C3', 'element': 'C'}, {'id': 'C4', 'element': 'C'}, {'id': 'C5', 'element': 'C'}, {'id': 'O1', 'element': 'O'}, {'id': 'C6', 'element': 'C'}, {'id': 'C7', 'element': 'C'}, {'id': 'C8', 'element': 'C'}, {'id': 'C9', 'element': 'C'}, {'id': 'C10', 'element': 'C'}, {'id': 'C11', 'element': 'C'}, {'id': 'C12', 'element': 'C'}, {'id': 'N1', 'element': 'N'}, {'id': 'C13', 'element': 'C'}, {'id': 'C14', 'element': 'C'}, {'id': 'C15', 'element': 'C'}, {'id': 'C16', 'element': 'C'}, {'id': 'O2', 'element': 'O'}, {'id': 'N2', 'element': 'N'}, {'id': 'C17', 'element': 'C'}, {'id': 'C18', 'element': 'C'}, {'id': 'C19', 'element': 'C'}, {'id': 'C20', 'element': 'C'}, {'id': 'F1', 'element': 'F'}, {'id': 'F2', 'element': 'F'}, {'id': 'F3', 'element': 'F'}, {'id': 'F4', 'element': 'F'}], 'bonds': [{'source': 'C1', 'target': 'C2', 'order': 1.0}, {'source': 'C2', 'target': 'C3', 'order': 1.0}, {'source': 'C2', 'target': 'C4', 'order': 1.0}, {'source': 'C4', 'target': 'C5', 'order': 1.0}, {'source': 'C5', 'target': 'O1', 'order': 1.0}, {'source': 'O1', 'target': 'C6', 'order': 1.0}, {'source': 'C6', 'target': 'C7', 'order': 1.5}, {'source': 'C7', 'target': 'C8', 'order': 1.5}, {'source': 'C8', 'target': 'C9', 'order': 1.5}, {'source': 'C9', 'target': 'C10', 'order': 1.5}, {'source': 'C10', 'target': 'C11', 'order': 1.5}, {'source': 'C9', 'target': 'C12', 'order': 1.0}, {'source': 'C12', 'target': 'N1', 'order': 1.0}, {'source': 'N1', 'target': 'C13', 'order': 1.0}, {'source': 'C13', 'target': 'C14', 'order': 1.0}, {'source': 'C14', 'target': 'C15', 'order': 1.0}, {'source': 'C14', 'target': 'C16', 'order': 1.0}, {'source': 'C16', 'target': 'O2', 'order': 2.0}, {'source': 'C16', 'target': 'N2', 'order': 1.0}, {'source': 'N2', 'target': 'C17', 'order': 1.0}, {'source': 'C17', 'target': 'C18', 'order': 1.0}, {'source': 'C18', 'target': 'C19', 'order': 1.0}, {'source': 'C19', 'target': 'C20', 'order': 1.0}, {'source': 'C20', 'target': 'F1', 'order': 1.0}, {'source': 'C20', 'target': 'F2', 'order': 1.0}, {'source': 'C20', 'target': 'F3', 'order': 1.0}, {'source': 'C8', 'target': 'F4', 'order': 1.0}, {'source': 'C11', 'target': 'C6', 'order': 1.5}, {'source': 'C15', 'target': 'N1', 'order': 1.0}]}",
+  "response_contract": "Return only a valid JSON object of the form {\"smiles\":\"...\"} with no markdown, code fences, comments, or prose.",
+  "expected_smiles": "CC(C)CCOc1ccc(CN2CC(C(=O)NCCCC(F)(F)F)C2)c(F)c1",
+  "metadata": {
+    "source_dataset": "translation_large",
+    "source_uuid": "b72e54cc-bb71-41a4-84ef-0c005a0fccf8",
+    "source_smiles": "CC(C)CCOc1ccc(CN2CC(C(=O)NCCCC(F)(F)F)C2)c(F)c1",
+    "input_format": "graph",
+    "heavy_atoms": 28,
+    "ring_count": 2
+  },
+  "spec_path": "data/query_specs/translation_graph_to_smiles_037_moljson.json",
+  "response_path": "outputs/responses/translation_graph_to_smiles_037_moljson.txt"
+}

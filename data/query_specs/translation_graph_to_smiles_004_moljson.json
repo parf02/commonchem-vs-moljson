@@ -1,0 +1,20 @@
+{
+  "id": "translation_graph_to_smiles_004_moljson",
+  "pair_id": "translation_graph_to_smiles_004",
+  "family": "translation_graph_to_smiles",
+  "representation": "moljson",
+  "evaluation_kind": "translation_to_smiles",
+  "prompt": "Convert the molecule from graph to smiles: {'atoms': [{'id': 'C1', 'element': 'C'}, {'id': 'C2', 'element': 'C'}, {'id': 'C3', 'element': 'C'}, {'id': 'S1', 'element': 'S'}, {'id': 'C4', 'element': 'C'}, {'id': 'C5', 'element': 'C'}, {'id': 'C6', 'element': 'C'}, {'id': 'O1', 'element': 'O'}, {'id': 'N1', 'element': 'N'}, {'id': 'Br1', 'element': 'Br'}], 'bonds': [{'source': 'C1', 'target': 'C2', 'order': 1.0}, {'source': 'C2', 'target': 'C3', 'order': 1.5}, {'source': 'C3', 'target': 'S1', 'order': 1.5}, {'source': 'S1', 'target': 'C4', 'order': 1.5}, {'source': 'C4', 'target': 'C5', 'order': 1.5}, {'source': 'C5', 'target': 'C6', 'order': 1.0}, {'source': 'C6', 'target': 'O1', 'order': 2.0}, {'source': 'C6', 'target': 'N1', 'order': 1.0}, {'source': 'C4', 'target': 'Br1', 'order': 1.0}, {'source': 'C5', 'target': 'C2', 'order': 1.5}]}",
+  "response_contract": "Return only a valid JSON object of the form {\"smiles\":\"...\"} with no markdown, code fences, comments, or prose.",
+  "expected_smiles": "Cc1csc(Br)c1C(N)=O",
+  "metadata": {
+    "source_dataset": "translation_large",
+    "source_uuid": "58a108d7-f27d-48b9-945d-ae0987f8fade",
+    "source_smiles": "Cc1csc(Br)c1C(N)=O",
+    "input_format": "graph",
+    "heavy_atoms": 10,
+    "ring_count": 1
+  },
+  "spec_path": "data/query_specs/translation_graph_to_smiles_004_moljson.json",
+  "response_path": "outputs/responses/translation_graph_to_smiles_004_moljson.txt"
+}

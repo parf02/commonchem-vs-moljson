@@ -1,0 +1,20 @@
+{
+  "id": "translation_graph_to_smiles_025_moljson",
+  "pair_id": "translation_graph_to_smiles_025",
+  "family": "translation_graph_to_smiles",
+  "representation": "moljson",
+  "evaluation_kind": "translation_to_smiles",
+  "prompt": "Convert the molecule from graph to smiles: {'atoms': [{'id': 'C1', 'element': 'C'}, {'id': 'C2', 'element': 'C'}, {'id': 'C3', 'element': 'C'}, {'id': 'C4', 'element': 'C'}, {'id': 'C5', 'element': 'C'}, {'id': 'C6', 'element': 'C'}, {'id': 'C7', 'element': 'C'}, {'id': 'C8', 'element': 'C'}, {'id': 'C9', 'element': 'C'}, {'id': 'C10', 'element': 'C'}, {'id': 'C11', 'element': 'C'}, {'id': 'C12', 'element': 'C'}, {'id': 'C13', 'element': 'C'}, {'id': 'C14', 'element': 'C'}, {'id': 'C15', 'element': 'C'}, {'id': 'C16', 'element': 'C'}, {'id': 'C17', 'element': 'C'}, {'id': 'C18', 'element': 'C'}, {'id': 'C19', 'element': 'C'}, {'id': 'C20', 'element': 'C'}, {'id': 'C21', 'element': 'C'}, {'id': 'O1', 'element': 'O'}, {'id': 'O2', 'element': 'O'}], 'bonds': [{'source': 'C1', 'target': 'C2', 'order': 1.0}, {'source': 'C2', 'target': 'C3', 'order': 1.0}, {'source': 'C2', 'target': 'C4', 'order': 1.0}, {'source': 'C4', 'target': 'C5', 'order': 1.0}, {'source': 'C5', 'target': 'C6', 'order': 1.0}, {'source': 'C6', 'target': 'C7', 'order': 1.0}, {'source': 'C7', 'target': 'C8', 'order': 1.0}, {'source': 'C7', 'target': 'C9', 'order': 1.0}, {'source': 'C9', 'target': 'C10', 'order': 1.0}, {'source': 'C10', 'target': 'C11', 'order': 1.0}, {'source': 'C11', 'target': 'C12', 'order': 1.0}, {'source': 'C12', 'target': 'C13', 'order': 1.0}, {'source': 'C12', 'target': 'C14', 'order': 1.0}, {'source': 'C14', 'target': 'C15', 'order': 1.0}, {'source': 'C15', 'target': 'C16', 'order': 1.0}, {'source': 'C16', 'target': 'C17', 'order': 1.0}, {'source': 'C17', 'target': 'C18', 'order': 1.0}, {'source': 'C17', 'target': 'C19', 'order': 1.0}, {'source': 'C10', 'target': 'C20', 'order': 1.0}, {'source': 'C20', 'target': 'C21', 'order': 1.0}, {'source': 'C21', 'target': 'O1', 'order': 2.0}, {'source': 'C21', 'target': 'O2', 'order': 1.0}]}",
+  "response_contract": "Return only a valid JSON object of the form {\"smiles\":\"...\"} with no markdown, code fences, comments, or prose.",
+  "expected_smiles": "CC(C)CCCC(C)CC(CC(=O)O)CC(C)CCCC(C)C",
+  "metadata": {
+    "source_dataset": "translation_large",
+    "source_uuid": "dbd3f2e3-bf1b-4a2a-8cfb-631f82e9f22b",
+    "source_smiles": "CC(C)CCCC(C)CC(CC(=O)O)CC(C)CCCC(C)C",
+    "input_format": "graph",
+    "heavy_atoms": 23,
+    "ring_count": 0
+  },
+  "spec_path": "data/query_specs/translation_graph_to_smiles_025_moljson.json",
+  "response_path": "outputs/responses/translation_graph_to_smiles_025_moljson.txt"
+}

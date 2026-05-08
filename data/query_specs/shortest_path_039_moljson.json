@@ -1,0 +1,20 @@
+{
+  "id": "shortest_path_039_moljson",
+  "pair_id": "shortest_path_039",
+  "family": "shortest_path",
+  "representation": "moljson",
+  "evaluation_kind": "shortest_path",
+  "prompt": "Determine the number of bonds along the shortest path connecting the two halogen atoms. Count each bond equally, including those directly attached to the halogen atoms.\n\n{'atoms': [{'id': 'C1', 'element': 'C'}, {'id': 'C2', 'element': 'C'}, {'id': 'C3', 'element': 'C'}, {'id': 'C4', 'element': 'C'}, {'id': 'C5', 'element': 'C'}, {'id': 'O1', 'element': 'O'}, {'id': 'N1', 'element': 'N'}, {'id': 'C6', 'element': 'C'}, {'id': 'C7', 'element': 'C'}, {'id': 'N2', 'element': 'N'}, {'id': 'C8', 'element': 'C'}, {'id': 'C9', 'element': 'C'}, {'id': 'C10', 'element': 'C'}, {'id': 'O2', 'element': 'O'}, {'id': 'C11', 'element': 'C'}, {'id': 'Cl1', 'element': 'Cl'}, {'id': 'N3', 'element': 'N'}, {'id': 'C12', 'element': 'C'}, {'id': 'O3', 'element': 'O'}, {'id': 'C13', 'element': 'C'}, {'id': 'N4', 'element': 'N'}, {'id': 'N5', 'element': 'N'}, {'id': 'C14', 'element': 'C'}, {'id': 'C15', 'element': 'C'}, {'id': 'C16', 'element': 'C'}, {'id': 'C17', 'element': 'C'}, {'id': 'C18', 'element': 'C'}, {'id': 'C19', 'element': 'C'}, {'id': 'Br1', 'element': 'Br'}, {'id': 'C20', 'element': 'C'}], 'bonds': [{'source': 'C1', 'target': 'C2', 'order': 1.0}, {'source': 'C2', 'target': 'C3', 'order': 1.0}, {'source': 'C2', 'target': 'C4', 'order': 1.0}, {'source': 'C4', 'target': 'C5', 'order': 1.0}, {'source': 'C5', 'target': 'O1', 'order': 2.0}, {'source': 'C5', 'target': 'N1', 'order': 1.0}, {'source': 'N1', 'target': 'C6', 'order': 1.0}, {'source': 'C6', 'target': 'C7', 'order': 1.0}, {'source': 'C7', 'target': 'N2', 'order': 1.0}, {'source': 'N2', 'target': 'C8', 'order': 1.0}, {'source': 'C8', 'target': 'C9', 'order': 1.0}, {'source': 'N2', 'target': 'C10', 'order': 1.0}, {'source': 'C10', 'target': 'O2', 'order': 2.0}, {'source': 'C10', 'target': 'C11', 'order': 1.0}, {'source': 'C11', 'target': 'Cl1', 'order': 1.0}, {'source': 'C2', 'target': 'N3', 'order': 1.0}, {'source': 'N3', 'target': 'C12', 'order': 1.0}, {'source': 'C12', 'target': 'O3', 'order': 2.0}, {'source': 'C12', 'target': 'C13', 'order': 1.0}, {'source': 'C13', 'target': 'N4', 'order': 1.5}, {'source': 'N4', 'target': 'N5', 'order': 1.5}, {'source': 'N5', 'target': 'C14', 'order': 1.5}, {'source': 'C14', 'target': 'C15', 'order': 1.5}, {'source': 'C15', 'target': 'C16', 'order': 1.5}, {'source': 'C16', 'target': 'C17', 'order': 1.5}, {'source': 'C17', 'target': 'C18', 'order': 1.5}, {'source': 'C18', 'target': 'C19', 'order': 1.5}, {'source': 'C18', 'target': 'Br1', 'order': 1.0}, {'source': 'N5', 'target': 'C20', 'order': 1.0}, {'source': 'C9', 'target': 'N1', 'order': 1.0}, {'source': 'C15', 'target': 'C13', 'order': 1.5}, {'source': 'C19', 'target': 'C14', 'order': 1.5}]}\n\nGive your answer as an integer. Do not write any comments.",
+  "response_contract": "Return only a valid JSON object of the form {\"integer\":\"N\"} where N is the shortest-path length, with no markdown, code fences, comments, or prose.",
+  "expected_integer": 17,
+  "metadata": {
+    "source_dataset": "shortest_path_questions",
+    "source_uuid": "b44ea0ba-7dba-4b74-b0a7-d242983c51db",
+    "source_smiles": "Cn1nc(C(=O)NC(C)(C)CC(=O)N2CCN(C(=O)CCl)CC2)c2ccc(Br)cc21",
+    "path_length": 17,
+    "heavy_atoms": 30,
+    "ring_count": 3
+  },
+  "spec_path": "data/query_specs/shortest_path_039_moljson.json",
+  "response_path": "outputs/responses/shortest_path_039_moljson.txt"
+}

@@ -1,0 +1,14 @@
+{
+  "manifest": "/Users/frederickparsons/Documents/CommonChem/experiments/commonchem_vs_moljson/artifacts_api500/queries.jsonl",
+  "log_csv": "/Users/frederickparsons/Documents/CommonChem/experiments/commonchem_vs_moljson/artifacts_api500/api_run_log.csv",
+  "model": "gpt-5.4",
+  "effort": "low",
+  "resume": false,
+  "query_count": 500,
+  "completed_ok": 500,
+  "completed_error": 0,
+  "input_tokens": 303305,
+  "output_tokens": 540221,
+  "total_tokens": 843526,
+  "elapsed_s": 735.352
+}

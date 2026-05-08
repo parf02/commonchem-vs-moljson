@@ -1,0 +1,1 @@
+{"commonchem":10,"molecules":[{"atoms":[{"z":6,"impHs":1,"chg":0,"isotope":0,"nRad":0},{"z":9,"impHs":0,"chg":0,"isotope":0,"nRad":0},{"z":17,"impHs":0,"chg":0,"isotope":0,"nRad":0},{"z":35,"impHs":0,"chg":0,"isotope":0,"nRad":0}],"bonds":[{"type":1,"atoms":[0,1]},{"type":1,"atoms":[0,2]},{"type":1,"atoms":[0,3]}]}]}

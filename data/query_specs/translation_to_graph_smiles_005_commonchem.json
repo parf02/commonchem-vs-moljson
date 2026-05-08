@@ -1,0 +1,20 @@
+{
+  "id": "translation_to_graph_smiles_005_commonchem",
+  "pair_id": "translation_to_graph_smiles_005",
+  "family": "translation_to_graph",
+  "representation": "commonchem",
+  "evaluation_kind": "translation_to_graph",
+  "prompt": "Convert the molecule from smiles to commonchem: C=CC(=O)OCC(O)CNC(=O)OCC",
+  "response_contract": "Return only a valid JSON object in CommonChem format. No markdown, no code fences, no comments, no surrounding prose. Use top-level keys \"commonchem\" and \"molecules\". Set \"commonchem\" to 10. Return exactly one molecule. Atom objects use \"z\" and \"impHs\" when nonzero, plus \"chg\" when nonzero. Bond objects use \"type\" and \"atoms\".",
+  "expected_smiles": "C=CC(=O)OCC(O)CNC(=O)OCC",
+  "metadata": {
+    "source_dataset": "translation_large",
+    "source_uuid": "3ffdb720-2dcb-4554-9215-a3c419d0f43d",
+    "source_smiles": "C=CC(=O)OCC(O)CNC(=O)OCC",
+    "input_format": "smiles",
+    "heavy_atoms": 15,
+    "ring_count": 0
+  },
+  "spec_path": "data/query_specs/translation_to_graph_smiles_005_commonchem.json",
+  "response_path": "outputs/responses/translation_to_graph_smiles_005_commonchem.txt"
+}

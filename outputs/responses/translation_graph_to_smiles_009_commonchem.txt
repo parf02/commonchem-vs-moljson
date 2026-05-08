@@ -1,0 +1,1 @@
+{"smiles":"COC(=O)CSCOC(C)(C)CNC=O"}

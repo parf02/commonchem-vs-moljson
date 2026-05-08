@@ -1,0 +1,6 @@
+family,n_pairs,commonchem_accuracy,moljson_accuracy,accuracy_diff_commonchem_minus_moljson,diff_ci_low,diff_ci_high,discordant_commonchem_only_correct,discordant_moljson_only_correct,mcnemar_p_value
+translation_to_graph,40,0.775,0.875,-0.09999999999999998,-0.25,0.05,3,7,0.34375
+translation_graph_to_smiles,40,0.775,0.675,0.09999999999999998,-0.05,0.25,7,3,0.34375
+shortest_path,50,0.98,1.0,-0.020000000000000018,-0.06,0.0,0,1,1.0
+constrained_generation,120,0.7833333333333333,0.8,-0.01666666666666672,-0.1,0.058333333333333334,10,12,0.8318119049072266
+overall,250,0.82,0.832,-0.01200000000000001,-0.064,0.04,20,23,0.7607916425613439

@@ -1,0 +1,20 @@
+{
+  "id": "translation_to_graph_iupac_011_commonchem",
+  "pair_id": "translation_to_graph_iupac_011",
+  "family": "translation_to_graph",
+  "representation": "commonchem",
+  "evaluation_kind": "translation_to_graph",
+  "prompt": "Convert the molecule from iupac to commonchem: 4-(4-ethylpiperidin-1-yl)-2-methoxybenzonitrile",
+  "response_contract": "Return only a valid JSON object in CommonChem format. No markdown, no code fences, no comments, no surrounding prose. Use top-level keys \"commonchem\" and \"molecules\". Set \"commonchem\" to 10. Return exactly one molecule. Atom objects use \"z\" and \"impHs\" when nonzero, plus \"chg\" when nonzero. Bond objects use \"type\" and \"atoms\".",
+  "expected_smiles": "CCC1CCN(c2ccc(C#N)c(OC)c2)CC1",
+  "metadata": {
+    "source_dataset": "translation_large",
+    "source_uuid": "fac0178a-2c8c-4c3d-b030-26a1c19adbad",
+    "source_smiles": "CCC1CCN(c2ccc(C#N)c(OC)c2)CC1",
+    "input_format": "iupac",
+    "heavy_atoms": 18,
+    "ring_count": 2
+  },
+  "spec_path": "data/query_specs/translation_to_graph_iupac_011_commonchem.json",
+  "response_path": "outputs/responses/translation_to_graph_iupac_011_commonchem.txt"
+}

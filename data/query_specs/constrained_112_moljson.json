@@ -1,0 +1,57 @@
+{
+  "id": "constrained_112_moljson",
+  "pair_id": "constrained_112",
+  "family": "constrained_generation",
+  "representation": "moljson",
+  "evaluation_kind": "constrained_generation",
+  "prompt": "Generate one valid molecule that satisfies all constraints below.\n- Connectivity: exactly 1 connected component (single connected molecule).\n- Number of F atoms: exactly 1.\n- Number of Cl atoms: exactly 1.\n- Number of Br atoms: exactly 1.\n- Shortest path between F and Cl: exactly 5 bonds (count all bonds on the path, including the bond to each halogen).\n- Shortest path between F and Br: exactly 3 bonds (count all bonds on the path, including the bond to each halogen).\n- Shortest path between Cl and Br: exactly 4 bonds (count all bonds on the path, including the bond to each halogen).\n- Number of rings: exactly 2.\n- Ring sizes: exactly one 3-membered ring and one 4-membered ring.\n- Ring topology: exactly one spiro center.\n- Halogen placement: each halogen must be directly bonded to a ring atom.\nReturn only the molecule in the requested output format.",
+  "response_contract": "Return only a valid JSON object in MolJSON format. No markdown, no code fences, no comments, no surrounding prose. Use the MolJSON keys atoms, bonds, charges, and aromatic_n_h.",
+  "constraints": {
+    "connected_components": 1,
+    "rings": 2,
+    "halogen_counts": {
+      "F": 1,
+      "Cl": 1,
+      "Br": 1
+    },
+    "shortest_halogen_paths": [
+      {
+        "between": [
+          "F",
+          "Cl"
+        ],
+        "distance_bonds": 5
+      },
+      {
+        "between": [
+          "F",
+          "Br"
+        ],
+        "distance_bonds": 3
+      },
+      {
+        "between": [
+          "Cl",
+          "Br"
+        ],
+        "distance_bonds": 4
+      }
+    ],
+    "halogens_bonded_to_ring_atoms": true,
+    "ring_sizes": {
+      "3": 1,
+      "4": 1
+    },
+    "fused_ring_systems": 0,
+    "spiro_centers": 1
+  },
+  "metadata": {
+    "source_dataset": "constrained_generation_tasks",
+    "source_uuid": "final_spiro_004",
+    "subcategory": "spiro",
+    "witness": "FC1CC2(CC2Cl)C1Br",
+    "witness_heavy_atoms": 9
+  },
+  "spec_path": "data/query_specs/constrained_112_moljson.json",
+  "response_path": "outputs/responses/constrained_112_moljson.txt"
+}

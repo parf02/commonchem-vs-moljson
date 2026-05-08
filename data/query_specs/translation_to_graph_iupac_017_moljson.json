@@ -1,0 +1,20 @@
+{
+  "id": "translation_to_graph_iupac_017_moljson",
+  "pair_id": "translation_to_graph_iupac_017",
+  "family": "translation_to_graph",
+  "representation": "moljson",
+  "evaluation_kind": "translation_to_graph",
+  "prompt": "Convert the molecule from iupac to graph: 3-[2-(2-methylprop-2-enoyloxy)ethyldisulfanyl]-2-[6-(propan-2-ylamino)hexanoylamino]propanoic acid",
+  "response_contract": "Return only a valid JSON object in MolJSON format. No markdown, no code fences, no comments, no surrounding prose. Use the MolJSON keys atoms, bonds, charges, and aromatic_n_h.",
+  "expected_smiles": "C=C(C)C(=O)OCCSSCC(NC(=O)CCCCCNC(C)C)C(=O)O",
+  "metadata": {
+    "source_dataset": "translation_large",
+    "source_uuid": "21e9cecb-bbf8-45fb-b7da-f994942644c0",
+    "source_smiles": "C=C(C)C(=O)OCCSSCC(NC(=O)CCCCCNC(C)C)C(=O)O",
+    "input_format": "iupac",
+    "heavy_atoms": 27,
+    "ring_count": 0
+  },
+  "spec_path": "data/query_specs/translation_to_graph_iupac_017_moljson.json",
+  "response_path": "outputs/responses/translation_to_graph_iupac_017_moljson.txt"
+}

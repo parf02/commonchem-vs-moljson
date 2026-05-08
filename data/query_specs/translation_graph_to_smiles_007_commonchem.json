@@ -1,0 +1,20 @@
+{
+  "id": "translation_graph_to_smiles_007_commonchem",
+  "pair_id": "translation_graph_to_smiles_007",
+  "family": "translation_graph_to_smiles",
+  "representation": "commonchem",
+  "evaluation_kind": "translation_to_smiles",
+  "prompt": "Convert the molecule from commonchem to smiles: {'commonchem': 10, 'molecules': [{'atoms': [{'z': 9}, {'z': 6, 'impHs': 1}, {'z': 9}, {'z': 6}, {'z': 6, 'impHs': 2}, {'z': 6}, {'z': 6, 'impHs': 2}, {'z': 35}, {'z': 6, 'impHs': 2}, {'z': 8}, {'z': 6, 'impHs': 2}], 'bonds': [{'type': 1, 'atoms': [0, 1]}, {'type': 1, 'atoms': [1, 2]}, {'type': 1, 'atoms': [1, 3]}, {'type': 1, 'atoms': [3, 4]}, {'type': 1, 'atoms': [4, 5]}, {'type': 1, 'atoms': [5, 6]}, {'type': 1, 'atoms': [6, 7]}, {'type': 1, 'atoms': [5, 8]}, {'type': 1, 'atoms': [8, 9]}, {'type': 1, 'atoms': [5, 10]}, {'type': 1, 'atoms': [9, 3]}, {'type': 1, 'atoms': [10, 3]}]}]}",
+  "response_contract": "Return only a valid JSON object of the form {\"smiles\":\"...\"} with no markdown, code fences, comments, or prose.",
+  "expected_smiles": "FC(F)C12CC(CBr)(CO1)C2",
+  "metadata": {
+    "source_dataset": "translation_large",
+    "source_uuid": "97df6b56-49b8-4a13-9e99-3a70a959c78c",
+    "source_smiles": "FC(F)C12CC(CBr)(CO1)C2",
+    "input_format": "graph",
+    "heavy_atoms": 11,
+    "ring_count": 3
+  },
+  "spec_path": "data/query_specs/translation_graph_to_smiles_007_commonchem.json",
+  "response_path": "outputs/responses/translation_graph_to_smiles_007_commonchem.txt"
+}

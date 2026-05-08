@@ -1,0 +1,20 @@
+{
+  "id": "translation_to_graph_iupac_018_commonchem",
+  "pair_id": "translation_to_graph_iupac_018",
+  "family": "translation_to_graph",
+  "representation": "commonchem",
+  "evaluation_kind": "translation_to_graph",
+  "prompt": "Convert the molecule from iupac to commonchem: N-[2-(2-hydroxyethoxy)ethyl]-8-(3-octyloxiran-2-yl)octanamide",
+  "response_contract": "Return only a valid JSON object in CommonChem format. No markdown, no code fences, no comments, no surrounding prose. Use top-level keys \"commonchem\" and \"molecules\". Set \"commonchem\" to 10. Return exactly one molecule. Atom objects use \"z\" and \"impHs\" when nonzero, plus \"chg\" when nonzero. Bond objects use \"type\" and \"atoms\".",
+  "expected_smiles": "CCCCCCCCC1OC1CCCCCCCC(=O)NCCOCCO",
+  "metadata": {
+    "source_dataset": "translation_large",
+    "source_uuid": "a115c296-212f-4958-ab85-9177486d623f",
+    "source_smiles": "CCCCCCCCC1OC1CCCCCCCC(=O)NCCOCCO",
+    "input_format": "iupac",
+    "heavy_atoms": 27,
+    "ring_count": 1
+  },
+  "spec_path": "data/query_specs/translation_to_graph_iupac_018_commonchem.json",
+  "response_path": "outputs/responses/translation_to_graph_iupac_018_commonchem.txt"
+}

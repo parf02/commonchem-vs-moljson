@@ -1,0 +1,20 @@
+{
+  "id": "shortest_path_041_commonchem",
+  "pair_id": "shortest_path_041",
+  "family": "shortest_path",
+  "representation": "commonchem",
+  "evaluation_kind": "shortest_path",
+  "prompt": "Determine the number of bonds along the shortest path connecting the two halogen atoms. Count each bond equally, including those directly attached to the halogen atoms.\n\n{'commonchem': 10, 'molecules': [{'atoms': [{'z': 6, 'impHs': 3}, {'z': 6, 'impHs': 1}, {'z': 6}, {'z': 6, 'impHs': 1}, {'z': 6, 'impHs': 1}, {'z': 6}, {'z': 17}, {'z': 6}, {'z': 7, 'chg': 1}, {'z': 8}, {'z': 8, 'chg': -1}, {'z': 6, 'impHs': 1}, {'z': 6}, {'z': 6, 'impHs': 1}, {'z': 6, 'impHs': 1}, {'z': 6}, {'z': 17}, {'z': 6}, {'z': 7, 'chg': 1}, {'z': 8}, {'z': 8, 'chg': -1}, {'z': 6, 'impHs': 1}], 'bonds': [{'type': 1, 'atoms': [0, 1]}, {'type': 1, 'atoms': [1, 2]}, {'type': 1, 'atoms': [2, 3]}, {'type': 2, 'atoms': [3, 4]}, {'type': 1, 'atoms': [4, 5]}, {'type': 1, 'atoms': [5, 6]}, {'type': 2, 'atoms': [5, 7]}, {'type': 1, 'atoms': [7, 8]}, {'type': 2, 'atoms': [8, 9]}, {'type': 1, 'atoms': [8, 10]}, {'type': 1, 'atoms': [7, 11]}, {'type': 1, 'atoms': [1, 12]}, {'type': 1, 'atoms': [12, 13]}, {'type': 2, 'atoms': [13, 14]}, {'type': 1, 'atoms': [14, 15]}, {'type': 1, 'atoms': [15, 16]}, {'type': 2, 'atoms': [15, 17]}, {'type': 1, 'atoms': [17, 18]}, {'type': 2, 'atoms': [18, 19]}, {'type': 1, 'atoms': [18, 20]}, {'type': 1, 'atoms': [17, 21]}, {'type': 2, 'atoms': [11, 2]}, {'type': 2, 'atoms': [21, 12]}]}]}\n\nGive your answer as an integer. Do not write any comments.",
+  "response_contract": "Return only a valid JSON object of the form {\"integer\":\"N\"} where N is the shortest-path length, with no markdown, code fences, comments, or prose.",
+  "expected_integer": 10,
+  "metadata": {
+    "source_dataset": "shortest_path_questions",
+    "source_uuid": "f7f24349-82f2-4b87-b35e-d23a63c4ea54",
+    "source_smiles": "CC(c1ccc(Cl)c([N+](=O)[O-])c1)c1ccc(Cl)c([N+](=O)[O-])c1",
+    "path_length": 10,
+    "heavy_atoms": 22,
+    "ring_count": 2
+  },
+  "spec_path": "data/query_specs/shortest_path_041_commonchem.json",
+  "response_path": "outputs/responses/shortest_path_041_commonchem.txt"
+}

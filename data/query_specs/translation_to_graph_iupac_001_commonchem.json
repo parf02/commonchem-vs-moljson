@@ -1,0 +1,20 @@
+{
+  "id": "translation_to_graph_iupac_001_commonchem",
+  "pair_id": "translation_to_graph_iupac_001",
+  "family": "translation_to_graph",
+  "representation": "commonchem",
+  "evaluation_kind": "translation_to_graph",
+  "prompt": "Convert the molecule from iupac to commonchem: 3-(2-hydroxy-3-methoxypropoxy)propanenitrile",
+  "response_contract": "Return only a valid JSON object in CommonChem format. No markdown, no code fences, no comments, no surrounding prose. Use top-level keys \"commonchem\" and \"molecules\". Set \"commonchem\" to 10. Return exactly one molecule. Atom objects use \"z\" and \"impHs\" when nonzero, plus \"chg\" when nonzero. Bond objects use \"type\" and \"atoms\".",
+  "expected_smiles": "COCC(O)COCCC#N",
+  "metadata": {
+    "source_dataset": "translation_large",
+    "source_uuid": "c68f325e-6543-4813-8046-ce524517c6b6",
+    "source_smiles": "COCC(O)COCCC#N",
+    "input_format": "iupac",
+    "heavy_atoms": 11,
+    "ring_count": 0
+  },
+  "spec_path": "data/query_specs/translation_to_graph_iupac_001_commonchem.json",
+  "response_path": "outputs/responses/translation_to_graph_iupac_001_commonchem.txt"
+}

@@ -1,0 +1,20 @@
+{
+  "id": "translation_to_graph_iupac_009_commonchem",
+  "pair_id": "translation_to_graph_iupac_009",
+  "family": "translation_to_graph",
+  "representation": "commonchem",
+  "evaluation_kind": "translation_to_graph",
+  "prompt": "Convert the molecule from iupac to commonchem: bis(2-methylpropyl) 2,5-dimethylhexanedioate",
+  "response_contract": "Return only a valid JSON object in CommonChem format. No markdown, no code fences, no comments, no surrounding prose. Use top-level keys \"commonchem\" and \"molecules\". Set \"commonchem\" to 10. Return exactly one molecule. Atom objects use \"z\" and \"impHs\" when nonzero, plus \"chg\" when nonzero. Bond objects use \"type\" and \"atoms\".",
+  "expected_smiles": "CC(C)COC(=O)C(C)CCC(C)C(=O)OCC(C)C",
+  "metadata": {
+    "source_dataset": "translation_large",
+    "source_uuid": "e73b2174-709a-4256-ba1f-b7df49258a6e",
+    "source_smiles": "CC(C)COC(=O)C(C)CCC(C)C(=O)OCC(C)C",
+    "input_format": "iupac",
+    "heavy_atoms": 20,
+    "ring_count": 0
+  },
+  "spec_path": "data/query_specs/translation_to_graph_iupac_009_commonchem.json",
+  "response_path": "outputs/responses/translation_to_graph_iupac_009_commonchem.txt"
+}

@@ -1,0 +1,1 @@
+{"smiles":"CC(C)CCOCC(C)C(C)C"}

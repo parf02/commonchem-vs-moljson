@@ -1,0 +1,20 @@
+{
+  "id": "shortest_path_047_commonchem",
+  "pair_id": "shortest_path_047",
+  "family": "shortest_path",
+  "representation": "commonchem",
+  "evaluation_kind": "shortest_path",
+  "prompt": "Determine the number of bonds along the shortest path connecting the two halogen atoms. Count each bond equally, including those directly attached to the halogen atoms.\n\n{'commonchem': 10, 'molecules': [{'atoms': [{'z': 6, 'impHs': 3}, {'z': 6, 'impHs': 2}, {'z': 6, 'impHs': 2}, {'z': 6, 'impHs': 2}, {'z': 6, 'impHs': 1}, {'z': 6, 'impHs': 2}, {'z': 6, 'impHs': 3}, {'z': 6}, {'z': 6, 'impHs': 1}, {'z': 6}, {'z': 17}, {'z': 6, 'impHs': 1}, {'z': 6, 'impHs': 1}, {'z': 6}, {'z': 6}, {'z': 8}, {'z': 6}, {'z': 6, 'impHs': 1}, {'z': 6, 'impHs': 1}, {'z': 6}, {'z': 17}, {'z': 6, 'impHs': 1}, {'z': 6}, {'z': 6, 'impHs': 1}, {'z': 6, 'impHs': 2}, {'z': 6, 'impHs': 3}, {'z': 6, 'impHs': 2}, {'z': 6, 'impHs': 2}, {'z': 6, 'impHs': 2}, {'z': 6, 'impHs': 3}], 'bonds': [{'type': 1, 'atoms': [0, 1]}, {'type': 1, 'atoms': [1, 2]}, {'type': 1, 'atoms': [2, 3]}, {'type': 1, 'atoms': [3, 4]}, {'type': 1, 'atoms': [4, 5]}, {'type': 1, 'atoms': [5, 6]}, {'type': 1, 'atoms': [4, 7]}, {'type': 1, 'atoms': [7, 8]}, {'type': 2, 'atoms': [8, 9]}, {'type': 1, 'atoms': [9, 10]}, {'type': 1, 'atoms': [9, 11]}, {'type': 2, 'atoms': [11, 12]}, {'type': 1, 'atoms': [12, 13]}, {'type': 1, 'atoms': [13, 14]}, {'type': 2, 'atoms': [14, 15]}, {'type': 1, 'atoms': [14, 16]}, {'type': 1, 'atoms': [16, 17]}, {'type': 2, 'atoms': [17, 18]}, {'type': 1, 'atoms': [18, 19]}, {'type': 1, 'atoms': [19, 20]}, {'type': 2, 'atoms': [19, 21]}, {'type': 1, 'atoms': [21, 22]}, {'type': 1, 'atoms': [22, 23]}, {'type': 1, 'atoms': [23, 24]}, {'type': 1, 'atoms': [24, 25]}, {'type': 1, 'atoms': [23, 26]}, {'type': 1, 'atoms': [26, 27]}, {'type': 1, 'atoms': [27, 28]}, {'type': 1, 'atoms': [28, 29]}, {'type': 2, 'atoms': [13, 7]}, {'type': 2, 'atoms': [22, 16]}]}]}\n\nGive your answer as an integer. Do not write any comments.",
+  "response_contract": "Return only a valid JSON object of the form {\"integer\":\"N\"} where N is the shortest-path length, with no markdown, code fences, comments, or prose.",
+  "expected_integer": 10,
+  "metadata": {
+    "source_dataset": "shortest_path_questions",
+    "source_uuid": "2b29e43d-a7d5-4f02-b636-3d9744ae20d1",
+    "source_smiles": "CCCCC(CC)c1cc(Cl)ccc1C(=O)c1ccc(Cl)cc1C(CC)CCCC",
+    "path_length": 10,
+    "heavy_atoms": 30,
+    "ring_count": 2
+  },
+  "spec_path": "data/query_specs/shortest_path_047_commonchem.json",
+  "response_path": "outputs/responses/shortest_path_047_commonchem.txt"
+}

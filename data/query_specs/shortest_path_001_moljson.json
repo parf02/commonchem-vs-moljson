@@ -1,0 +1,20 @@
+{
+  "id": "shortest_path_001_moljson",
+  "pair_id": "shortest_path_001",
+  "family": "shortest_path",
+  "representation": "moljson",
+  "evaluation_kind": "shortest_path",
+  "prompt": "Determine the number of bonds along the shortest path connecting the two halogen atoms. Count each bond equally, including those directly attached to the halogen atoms.\n\n{'atoms': [{'id': 'C1', 'element': 'C'}, {'id': 'C2', 'element': 'C'}, {'id': 'C3', 'element': 'C'}, {'id': 'C4', 'element': 'C'}, {'id': 'C5', 'element': 'C'}, {'id': 'O1', 'element': 'O'}, {'id': 'C6', 'element': 'C'}, {'id': 'C7', 'element': 'C'}, {'id': 'N1', 'element': 'N'}, {'id': 'C8', 'element': 'C'}, {'id': 'C9', 'element': 'C'}, {'id': 'N2', 'element': 'N'}, {'id': 'C10', 'element': 'C'}, {'id': 'F1', 'element': 'F'}, {'id': 'F2', 'element': 'F'}], 'bonds': [{'source': 'C1', 'target': 'C2', 'order': 1.0}, {'source': 'C2', 'target': 'C3', 'order': 1.0}, {'source': 'C2', 'target': 'C4', 'order': 1.0}, {'source': 'C2', 'target': 'C5', 'order': 1.0}, {'source': 'C5', 'target': 'O1', 'order': 2.0}, {'source': 'C5', 'target': 'C6', 'order': 1.0}, {'source': 'C6', 'target': 'C7', 'order': 1.0}, {'source': 'C7', 'target': 'N1', 'order': 1.0}, {'source': 'N1', 'target': 'C8', 'order': 1.0}, {'source': 'C8', 'target': 'C9', 'order': 1.0}, {'source': 'C9', 'target': 'N2', 'order': 1.0}, {'source': 'C8', 'target': 'C10', 'order': 1.0}, {'source': 'C10', 'target': 'F1', 'order': 1.0}, {'source': 'C10', 'target': 'F2', 'order': 1.0}, {'source': 'N2', 'target': 'C6', 'order': 1.0}]}\n\nGive your answer as an integer. Do not write any comments.",
+  "response_contract": "Return only a valid JSON object of the form {\"integer\":\"N\"} where N is the shortest-path length, with no markdown, code fences, comments, or prose.",
+  "expected_integer": 2,
+  "metadata": {
+    "source_dataset": "shortest_path_questions",
+    "source_uuid": "00146434-7804-4a55-93b8-37ae08097d66",
+    "source_smiles": "CC(C)(C)C(=O)C1CNC(C(F)F)CN1",
+    "path_length": 2,
+    "heavy_atoms": 15,
+    "ring_count": 1
+  },
+  "spec_path": "data/query_specs/shortest_path_001_moljson.json",
+  "response_path": "outputs/responses/shortest_path_001_moljson.txt"
+}

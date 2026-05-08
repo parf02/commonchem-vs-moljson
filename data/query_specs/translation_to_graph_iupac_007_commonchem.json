@@ -1,0 +1,20 @@
+{
+  "id": "translation_to_graph_iupac_007_commonchem",
+  "pair_id": "translation_to_graph_iupac_007",
+  "family": "translation_to_graph",
+  "representation": "commonchem",
+  "evaluation_kind": "translation_to_graph",
+  "prompt": "Convert the molecule from iupac to commonchem: 6-(4-aminophenyl)-5-fluoropyridin-3-ol",
+  "response_contract": "Return only a valid JSON object in CommonChem format. No markdown, no code fences, no comments, no surrounding prose. Use top-level keys \"commonchem\" and \"molecules\". Set \"commonchem\" to 10. Return exactly one molecule. Atom objects use \"z\" and \"impHs\" when nonzero, plus \"chg\" when nonzero. Bond objects use \"type\" and \"atoms\".",
+  "expected_smiles": "Nc1ccc(-c2ncc(O)cc2F)cc1",
+  "metadata": {
+    "source_dataset": "translation_large",
+    "source_uuid": "c1b28477-ad51-4529-bcbc-970379c668ee",
+    "source_smiles": "Nc1ccc(-c2ncc(O)cc2F)cc1",
+    "input_format": "iupac",
+    "heavy_atoms": 15,
+    "ring_count": 2
+  },
+  "spec_path": "data/query_specs/translation_to_graph_iupac_007_commonchem.json",
+  "response_path": "outputs/responses/translation_to_graph_iupac_007_commonchem.txt"
+}
